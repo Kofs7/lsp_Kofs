@@ -2,6 +2,7 @@ package org.howard.edu.lsp.assignment5;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -11,14 +12,18 @@ import org.junit.jupiter.api.Test;
  *
  */
 
-class IntegerSetTest {
+/**
+ * Class to test the methods of the IntegerSet class
+ */
+public class IntegerSetTest {
 	
 	/**
 	 * Test to check the clear() method functionality
 	 * The clear() method clears the set
 	 */
 	@Test
-	void testClear() {
+	@DisplayName("Test case for clear")
+	public void testClear() {
 		IntegerSet set = new IntegerSet();
 		assertEquals(0, set.length());
 		assertTrue(set.isEmpty());
@@ -51,7 +56,8 @@ class IntegerSetTest {
 	 * The length() method returns the length of the set
 	 */
 	@Test
-	void testLength() {
+	@DisplayName("Test case for length")
+	public void testLength() {
 		IntegerSet set = new IntegerSet();
 		assertEquals(0, set.length());
 		set.add(0);
@@ -87,7 +93,8 @@ class IntegerSetTest {
 	 * The equals() method returns a boolean if set1 and set2 have the same elements in any order
 	 */
 	@Test
-	void testEquals() {
+	@DisplayName("Test case for equals")
+	public void testEquals() {
 		IntegerSet set1 = new IntegerSet();
 		IntegerSet set2 = new IntegerSet();
 		assertTrue(set1.equals(set2));
@@ -151,7 +158,8 @@ class IntegerSetTest {
 	 * The contains() method returns a boolean if an element is in the set or not
 	 */
 	@Test
-	void testContains() {
+	@DisplayName("Test case for contains")
+	public void testContains() {
 		IntegerSet set = new IntegerSet();
 		assertFalse(set.contains(0));
 		set.add(0);
@@ -209,7 +217,8 @@ class IntegerSetTest {
 	 * @throws IntegerSetException if set is empty
 	 */
 	@Test
-	void testLargest() throws IntegerSetException {
+	@DisplayName("Test case for largest")
+	public void testLargest() throws IntegerSetException {
 		IntegerSet set = new IntegerSet();
 		assertThrows(IntegerSetException.class, () -> set.largest()); // error message
 		set.add(0);
@@ -267,7 +276,8 @@ class IntegerSetTest {
 	 * @throws IntegerSetException if set is empty
 	 */
 	@Test
-	void testSmallest() throws IntegerSetException {
+	@DisplayName("Test case for smallest")
+	public void testSmallest() throws IntegerSetException {
 		IntegerSet set = new IntegerSet();
 		assertThrows(IntegerSetException.class, () -> set.smallest()); // error message
 		set.add(0);
@@ -323,7 +333,8 @@ class IntegerSetTest {
 	 * The add() method adds an element to the set
 	 */
 	@Test
-	void testAdd() {
+	@DisplayName("Test case for add")
+	public void testAdd() {
 		IntegerSet set = new IntegerSet();
 		set.add(2);
 		set.add(10);
@@ -360,7 +371,8 @@ class IntegerSetTest {
 	 * The remove() method removes an element from the set
 	 */
 	@Test
-	void testRemove() {
+	@DisplayName("Test case for remove")
+	public void testRemove() {
 		IntegerSet set = new IntegerSet();
 		assertEquals(0, set.length());
 		set.add(0);
@@ -414,7 +426,8 @@ class IntegerSetTest {
 	 * The union() method adds the element in set2 to set1 if they are not in set1
 	 */
 	@Test
-	void testUnion() {
+	@DisplayName("Test case for union")
+	public void testUnion() {
 		IntegerSet set1 = new IntegerSet();
 		IntegerSet set2 = new IntegerSet();
 		set1.union(set2);
@@ -472,7 +485,8 @@ class IntegerSetTest {
 	 * The intersect() method puts the elements that exist in both set1 and set2 into set1
 	 */
 	@Test
-	void testIntersect() {
+	@DisplayName("Test case for intersect")
+	public void testIntersect() {
 		IntegerSet set1 = new IntegerSet();
 		IntegerSet set2 = new IntegerSet();
 		set1.intersect(set2);
@@ -536,7 +550,8 @@ class IntegerSetTest {
 	 * The diff() method removes the elements common to both set1 and set2 from set1
 	 */
 	@Test
-	void testDiff() {
+	@DisplayName("Test case for difference")
+	public void testDiff() {
 		IntegerSet set1 = new IntegerSet();
 		IntegerSet set2 = new IntegerSet();
 		set1.diff(set2);
@@ -600,7 +615,8 @@ class IntegerSetTest {
 	 * The isEmpty() method returns a boolean if set1 is empty or not
 	 */
 	@Test
-	void testIsEmpty() {
+	@DisplayName("Test case for isEmpty")
+	public void testIsEmpty() {
 		IntegerSet set = new IntegerSet();
 		assertTrue(set.isEmpty());
 		set.add(-21);
@@ -627,7 +643,8 @@ class IntegerSetTest {
 	 * The toString() method returns a string representation of the set
 	 */
 	@Test
-	void testToString() {
+	@DisplayName("Test case for toString")
+	public void testToString() {
 		IntegerSet set = new IntegerSet();
 		assertTrue(set.toString().equals("[]"));
 		set.add(0);
