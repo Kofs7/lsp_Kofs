@@ -47,7 +47,7 @@ public class IntegerSet {
 	}
 	
 	/**
-	 * Returns true if the sets are equal, flase otherwise
+	 * Returns true if the sets are equal, false otherwise
 	 * Two sets are equal if they contain all the same values in ANY order
 	 * @return true if the sets are equal, false otherwise of type boolean
 	 * @param b, an IntgerSet object of class IntegerSet
@@ -66,7 +66,7 @@ public class IntegerSet {
 	}
 	
 	/**
-	 * Returns true if the set contains the value, flase otherwise
+	 * Returns true if the set contains the value, false otherwise
 	 * @return true if the set contains the value, false otherwise of type boolean
 	 * @param value, a value of type int
 	 */
